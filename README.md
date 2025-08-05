@@ -73,6 +73,22 @@ geoRef.subscribeWithin(
 
 ---
 
+
+## 📁 Firestore Document Structure
+
+```json
+{
+  "location": {
+    "geopoint": GeoPoint(23.8103, 90.4125),
+    "geohash": "w21zv0h9"
+  },
+  "name": "Shop 01",
+  "isVisible": true
+}
+```
+
+
+
 ## 🧑‍💻 Example Usage
 
 ### Define Your Model
@@ -168,19 +184,6 @@ geoRef.subscribeWithin(
 ```json
 {
   "geo": {
-    "geopoint": GeoPoint(23.8103, 90.4125),
-    "geohash": "w21zv0h9"
-  },
-  "name": "Shop 01",
-  "isVisible": true
-}
-```
-
-## 🧾 Alternative Firestore Format
-
-```json
-{
-  "location": {
     "geopoint": GeoPoint(23.8103, 90.4125),
     "geohash": "w21zv0h9"
   }

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:geo_lat_lon/geo_lat_lon.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:simple/converter/location_firestore_model_converter.dart';
 
 import '../add_location.dart';
 import '../set_or_delete_location.dart';
