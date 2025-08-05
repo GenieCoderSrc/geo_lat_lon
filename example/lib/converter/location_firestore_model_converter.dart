@@ -13,3 +13,4 @@ class LocationFireStoreModelConverter
     return model.toJson();
   }
 }
+

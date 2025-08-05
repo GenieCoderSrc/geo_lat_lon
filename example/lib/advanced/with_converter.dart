@@ -68,6 +68,7 @@ class WithConverterExampleState extends State<WithConverterExample> {
     },
   );
 
+
   /// Updates [_markers] by fetched geo [DocumentSnapshot]s.
   void _updateMarkersByDocumentSnapshots(
     List<DocumentSnapshot<Location>> documentSnapshots,
