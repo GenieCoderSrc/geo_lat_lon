@@ -5,6 +5,16 @@ All notable changes to the `geo_lat_lon` package will be documented in this file
 ---
 
 
+## 0.0.2
+
+### Aug 5, 2025
+
+### ✅Updated
+
+* ✅ Updated the Example code with `GoogleMapExample`.
+* ✅ Updated the [README.md](README.md) with more Example codes.
+
+
 ## 0.0.1
 
 ### Aug 5, 2025
