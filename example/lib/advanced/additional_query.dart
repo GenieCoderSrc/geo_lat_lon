@@ -57,7 +57,7 @@ class AdditionalQueryExampleState extends State<AdditionalQueryExample> {
       );
 
       return GeoCollectionReference<Location>(collectionRef).subscribeWithin(
-        center: GeoLatLon(
+        center: GeoFirePoint(
           GeoPoint(
             _cameraPosition.target.latitude,
             _cameraPosition.target.longitude,
@@ -110,7 +110,7 @@ class AdditionalQueryExampleState extends State<AdditionalQueryExample> {
           builder: (context) => SetOrDeleteLocationDialog(
             id: id,
             name: name,
-            geoLatLon: GeoLatLon(
+            geoLatLon: GeoFirePoint(
               GeoPoint(geoPoint.latitude, geoPoint.longitude),
             ),
           ),

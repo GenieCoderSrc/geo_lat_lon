@@ -15,7 +15,7 @@ void listenNearByLocation() async {
   // Listen to shops within 5km radius
   geoRef
       .subscribeWithin(
-    center: GeoLatLon(GeoPoint(23.8103, 90.4125)),
+    center: GeoFirePoint(GeoPoint(23.8103, 90.4125)),
     radiusInKm: 5.0,
     field: 'location',
     geopointFrom: (shop) => shop.location,

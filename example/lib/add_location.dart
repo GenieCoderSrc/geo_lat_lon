@@ -121,7 +121,7 @@ class AddLocationDialogState extends State<AddLocationDialog> {
     double longitude, {
     String field = 'geo',
   }) async {
-    final geoLatLon = GeoLatLon(GeoPoint(latitude, longitude));
+    final geoLatLon = GeoFirePoint(GeoPoint(latitude, longitude));
     await GeoCollectionReference<Map<String, dynamic>>(
       FirebaseFirestore.instance.collection('locations'),
     ).add(<String, dynamic>{

@@ -15,6 +15,6 @@ class Shop {
 
   Map<String, dynamic> toJson() => {
     'name': name,
-    'location': GeoLatLon(location).data, // includes geohash and geopoint
+    'location': GeoFirePoint(location).data, // includes geohash and geopoint
   };
 }

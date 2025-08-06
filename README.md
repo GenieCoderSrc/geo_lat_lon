@@ -39,7 +39,7 @@ An enhanced wrapper around Firestore’s `CollectionReference<T>` that enables q
 * `fetchWithin(...)`
 * `subscribeWithin(...)`
 
-### 📍 `GeoLatLon`
+### 📍 `GeoFirePoint`
 
 Encapsulates a Firestore `GeoPoint` and provides:
 
@@ -60,7 +60,7 @@ A wrapper for Firestore `DocumentSnapshot` with calculated distance from a cente
 final geoRef = GeoCollectionReference<ShopModel>(shopCollection);
 
 geoRef.subscribeWithin(
-  center: GeoLatLon(GeoPoint(23.81, 90.41)),
+  center: GeoFirePoint(GeoPoint(23.81, 90.41)),
   radiusInKm: 5.0,
   field: 'location',
   geopointFrom: (shop) => shop.location,
@@ -166,7 +166,7 @@ final locationCollection = typedCollectionReference<Location>(
 final geoRef = GeoCollectionReference<Location>(locationCollection);
 
 geoRef.subscribeWithin(
-  center: GeoLatLon(GeoPoint(23.81, 90.41)),
+  center: GeoFirePoint(GeoPoint(23.81, 90.41)),
   radiusInKm: 5.0,
   field: 'geo',
   geopointFrom: (location) => location.geo.geopoint,
@@ -190,10 +190,10 @@ geoRef.subscribeWithin(
 }
 ```
 
-Use the `GeoLatLon` class to generate this data consistently.
+Use the `GeoFirePoint` class to generate this data consistently.
 
 ```dart
-final point = GeoLatLon(GeoPoint(23.8103, 90.4125));
+final point = GeoFirePoint(GeoPoint(23.8103, 90.4125));
 final data = point.data; // {'geopoint': ..., 'geohash': ...}
 ```
 
@@ -211,7 +211,7 @@ final data = point.data; // {'geopoint': ..., 'geohash': ...}
 
 ## ⚠️ Notes
 
-* Always use `GeoLatLon` when saving or updating geo fields.
+* Always use `GeoFirePoint` when saving or updating geo fields.
 * Use `strictMode: true` when you want distance-accurate filtering.
 * This package requires Firestore indexing on the geohash field
 * Avoid radius smaller than 0.5 km for edge-case accuracy

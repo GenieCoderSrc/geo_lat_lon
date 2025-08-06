@@ -70,7 +70,7 @@ class GoogleMapExampleState extends State<GoogleMapExample> {
 
   late final Stream<List<DocumentSnapshot<Map<String, dynamic>>>> _stream =
       _geoQueryCondition.switchMap((geoQueryCondition) {
-    final centerPoint = GeoLatLon(
+    final centerPoint = GeoFirePoint(
       GeoPoint(
         geoQueryCondition.cameraPosition.target.latitude,
         geoQueryCondition.cameraPosition.target.longitude,
@@ -104,7 +104,7 @@ class GoogleMapExampleState extends State<GoogleMapExample> {
             builder: (context) => SetOrDeleteLocationDialog(
               id: ds.id,
               name: data['name'],
-              geoLatLon: GeoLatLon(point),
+              geoLatLon: GeoFirePoint(point),
             ),
           ),
         ),

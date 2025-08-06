@@ -54,7 +54,7 @@ class WithConverterExampleState extends State<WithConverterExample> {
       );
 
       return GeoCollectionReference<Location>(collectionRef).subscribeWithin(
-        center: GeoLatLon(
+        center: GeoFirePoint(
           GeoPoint(
             _cameraPosition.target.latitude,
             _cameraPosition.target.longitude,
@@ -105,7 +105,7 @@ class WithConverterExampleState extends State<WithConverterExample> {
           builder: (context) => SetOrDeleteLocationDialog(
             id: id,
             name: name,
-            geoLatLon: GeoLatLon(
+            geoLatLon: GeoFirePoint(
               GeoPoint(geoPoint.latitude, geoPoint.longitude),
             ),
           ),

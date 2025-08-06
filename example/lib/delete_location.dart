@@ -12,7 +12,7 @@ class DeleteLocationDialog extends StatelessWidget {
 
   final String id;
   final String name;
-  final GeoLatLon geoLatLon;
+  final GeoFirePoint geoLatLon;
 
   @override
   Widget build(BuildContext context) {

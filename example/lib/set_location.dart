@@ -12,7 +12,7 @@ class SetLocationDialog extends StatefulWidget {
 
   final String id;
   final String name;
-  final GeoLatLon geoLatLon;
+  final GeoFirePoint geoLatLon;
 
   @override
   State<SetLocationDialog> createState() => _SetLocationDialogState();
@@ -126,7 +126,7 @@ class _SetLocationDialogState extends State<SetLocationDialog> {
     double newLatitude,
     double newLongitude,
   ) async {
-    final geoLatLon = GeoLatLon(GeoPoint(newLatitude, newLongitude));
+    final geoLatLon = GeoFirePoint(GeoPoint(newLatitude, newLongitude));
     await GeoCollectionReference<Map<String, dynamic>>(
       FirebaseFirestore.instance.collection('locations'),
     ).set(
