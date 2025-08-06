@@ -9,12 +9,13 @@ class Shop {
   final GeoPoint location;
 
   factory Shop.fromJson(Map<String, dynamic> json) => Shop(
-    name: json['name'] as String,
-    location: (json['location']['geopoint']) as GeoPoint,
-  );
+        name: json['name'] as String,
+        location: (json['location']['geopoint']) as GeoPoint,
+      );
 
   Map<String, dynamic> toJson() => {
-    'name': name,
-    'location': GeoFirePoint(location).data, // includes geohash and geopoint
-  };
+        'name': name,
+        'location':
+            GeoFirePoint(location).data, // includes geohash and geopoint
+      };
 }

@@ -110,7 +110,7 @@ class AdditionalQueryExampleState extends State<AdditionalQueryExample> {
           builder: (context) => SetOrDeleteLocationDialog(
             id: id,
             name: name,
-            geoLatLon: GeoFirePoint(
+            geoFirePoint: GeoFirePoint(
               GeoPoint(geoPoint.latitude, geoPoint.longitude),
             ),
           ),

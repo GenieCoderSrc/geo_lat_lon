@@ -104,7 +104,7 @@ class GoogleMapExampleState extends State<GoogleMapExample> {
             builder: (context) => SetOrDeleteLocationDialog(
               id: ds.id,
               name: data['name'],
-              geoLatLon: GeoFirePoint(point),
+              geoFirePoint: GeoFirePoint(point),
             ),
           ),
         ),

@@ -68,7 +68,6 @@ class WithConverterExampleState extends State<WithConverterExample> {
     },
   );
 
-
   /// Updates [_markers] by fetched geo [DocumentSnapshot]s.
   void _updateMarkersByDocumentSnapshots(
     List<DocumentSnapshot<Location>> documentSnapshots,
@@ -105,7 +104,7 @@ class WithConverterExampleState extends State<WithConverterExample> {
           builder: (context) => SetOrDeleteLocationDialog(
             id: id,
             name: name,
-            geoLatLon: GeoFirePoint(
+            geoFirePoint: GeoFirePoint(
               GeoPoint(geoPoint.latitude, geoPoint.longitude),
             ),
           ),
