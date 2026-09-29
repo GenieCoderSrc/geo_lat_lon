@@ -20,6 +20,8 @@
 Add the package to your `pubspec.yaml`:
 
 ```yaml
+resolution: workspace
+
 dependencies:
   geo_lat_lon: <latest_version>
 ```
